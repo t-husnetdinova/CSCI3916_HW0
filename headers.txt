@@ -1,3 +1,4 @@
+-----HEADERS FROM GOOGLEBOOKS.JS-----
 {"expires":"Wed, 30 Jan 2019 17:51:59 GMT",
 "date":"Wed, 30 Jan 2019 17:51:59 GMT",
 "cache-control":"private, max-age=0, must-revalidate, no-transform",
@@ -15,4 +16,23 @@
 {"Accept":"application/json, text/plain, */*",
 "User-Agent":"axios/0.18.0"}
 
-//describe what each header is
+-----WHAT EACH HEADER MEANS-----
+expires: tells you when the response expires and becomes unusable
+date: tells us the date and time when the header was created
+cache-control: specifies directives for caching mechanisms in requests and responses
+etag: tells you the specific version of a resource, this allows caches to be more efficient, saves bandwidth
+vary: determines how to match future request headers to decide whether a cached response can be used rather than requesting a fresh one from the origin server
+content-type:indicates the media type of the resource
+x-content-type-options: marker used by the server to indicate that the MIME (Multipurpose Internet Mail Extension) types advertised in the Content-Type headers should not be changed and be followed
+x-frame-options: this indicates whether or not a browser should be allowed to render a page in a <frame>, <iframe>, <embed> or <object>
+x-xss-protection: feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks
+content-length: header indicates the size of the entity-body, in bytes, sent to the recipient
+server: tells us the information about the software used by the origin server to handle requests
+alt-svc: alternate ways to reach the website
+connection: controls whether or not the network connection stays open after the current transaction is finished
+
+Accept: advertises which content types, expressed as MIME (Multipurpose Internet Mail Extension) types, the client is able to understand
+User-Agent: contains a characteristic string that allows the network protocol peers to identify the application type, operating system, software vendor or software version of the requesting software user agent
+
+-----SOURCES USED TO LOOK UP HEADER MEANINGS-----
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
